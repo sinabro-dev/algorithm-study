@@ -26,11 +26,11 @@
 
 ## [Week 02] DFS
 
-| 문제 | 풀이 코드 |
-| :--: | :-------: |
-|      |           |
-|      |           |
-|      |           |
+|                             문제                             |                          풀이 코드                           |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| [16947 서울 지하철 2호선](https://www.acmicpc.net/problem/16947) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week01/16947%20%EC%84%9C%EC%9A%B8%20%EC%A7%80%ED%95%98%EC%B2%A0%202%ED%98%B8%EC%84%A0) |
+|   [1967 트리의 지름](https://www.acmicpc.net/problem/1967)   | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week01/1967%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EC%A7%80%EB%A6%84) |
+|  [17471 게리맨더링](https://www.acmicpc.net/problem/17471)   | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week01/17471%20%EA%B2%8C%EB%A6%AC%EB%A7%A8%EB%8D%94%EB%A7%81) |
 
 <br>
 
