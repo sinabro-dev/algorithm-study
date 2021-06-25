@@ -17,17 +17,16 @@
 
 ### Language 학습
 
-해당 스터디는 Golang을 주로 사용합니다.
+해당 스터디는 다양한 언어를 경험하고자 합니다.
 
-TDD (Test-Driven Development) 방식으로 배우는 Golang 서적, [Golang with Test](https://quii.gitbook.io/learn-go-with-tests/)을 정독하여 언어 기초를 학습합니다.
+- Golang
+  TDD (Test-Driven Development) 방식으로 배우는 Golang 서적, [Golang with Test](https://quii.gitbook.io/learn-go-with-tests/) 을 정독하여 언어 기초를 학습합니다.
 
 <br>
 
 ### BOJ  / LeetCode 풀이
 
-BOJ 와 LeetCode 순으로, 백준 기준 골드 난이도의 문제를 주차별 알고리즘에 맞춰 풀이합니다.
-
-[ 목록](https://github.com/joonparkhere/algorithm-study/blob/main/Assignment-list.md)
+BOJ 와 LeetCode 순으로, 백준 기준 골드 난이도의 문제를 주차별 알고리즘에 맞춰 풀이합니다. ([과제 목록](https://github.com/joonparkhere/algorithm-study/blob/main/Assignment-list.md))
 
 <br>
 
