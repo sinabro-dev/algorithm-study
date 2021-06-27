@@ -55,7 +55,6 @@ func main() {
 	defer wr.Flush()
 	numOfCase := scanInt()
 	primeNumbers = findPrimeNumbers()
-	//primeNodes := findPrimeNodes()
 	for i := 0; i < numOfCase; i++ {
 		result := solve(scanInt(), scanInt())
 		if result == -1 {
