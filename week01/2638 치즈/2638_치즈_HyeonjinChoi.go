@@ -4,26 +4,64 @@ import (
 	"fmt"
 )
 
-var dx = [4]int{0, 1, 0, -1}
-var dy = [4]int{-1, 0, 1, 0}
-
 // 큐 구현
 type Queue struct {
 	data []int
 }
+
 func (q *Queue) is_empty() bool {
 	return len(q.data) == 0
 }
 func (q *Queue) peek() int {
-	return q.data[0]
+	front := q.data[0]
+
+	if !q.is_empty() {
+		q.data = q.data[1:]
+	}
+
+	return front
 }
 func (q *Queue) enqueue(num int) {
 	q.data = append(q.data, num)
 }
-func (q *Queue) dequeue() {
-	if !q.is_empty() {
-		q.data = q.data[1:]
+
+var (
+	dx = [4]int{0, 1, 0, -1}
+	dy = [4]int{-1, 0, 1, 0}
+)
+
+func main() {
+
+	var row, col, input int
+
+	// 맵 입력
+	fmt.Scan(&row, &col)
+
+	paperMap := make([][]int, row)
+	for i := 0; i < row; i++ {
+		paperMap[i] = make([]int, col)
 	}
+
+	for i := 0; i < row; i++ {
+		for j := 0; j < col; j++ {
+			fmt.Scan(&input)
+			paperMap[i][j] = input
+		}
+	}
+
+	// 치즈가 녹는 시간 파악
+	count := 0
+
+	for {
+		// bfs 험수의 반환 값을 통해 치즈가 녹았는지 여부 판별
+		if bfs(row, col, paperMap) {
+			count++
+		} else {
+			break
+		}
+	}
+
+	fmt.Println(count)
 }
 
 func bfs(row, col int, paperMap [][]int) bool {
@@ -59,9 +97,7 @@ func bfs(row, col int, paperMap [][]int) bool {
 
 		// 현재 큐 front에 저장되어있는 x, y 좌표
 		curX := xQueue.peek()
-		xQueue.dequeue()
 		curY := yQueue.peek()
-		yQueue.dequeue()
 
 		// 반약 현재 좌표의 지점을 방문했다면 continue
 		if visit[curY][curX] {
@@ -106,38 +142,4 @@ func bfs(row, col int, paperMap [][]int) bool {
 	}
 
 	return checkMelt
-}
-
-func main() {
-
-	var row, col, input int
-
-	// 맵 입력
-	fmt.Scan(&row, &col)
-
-	paperMap := make([][]int, row)
-	for i := 0; i < row; i++ {
-		paperMap[i] = make([]int, col)
-	}
-
-	for i := 0; i < row; i++ {
-		for j := 0; j < col; j++ {
-			fmt.Scan(&input)
-			paperMap[i][j] = input
-		}
-	}
-
-	// 치즈가 녹는 시간 파악
-	count := 0
-
-	for {
-		// bfs 험수의 반환 값을 통해 치즈가 녹았는지 여부 판별
-		if bfs(row, col, paperMap) {
-			count++
-		} else {
-			break
-		}
-	}
-
-	fmt.Println(count)
 }
