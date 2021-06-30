@@ -31,7 +31,7 @@
 | 문제 | 풀이 코드 |
 | :--: | :-------: |
 | [4256 트리](https://www.acmicpc.net/problem/4256) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week03/assignment01) |
-| [1967 트리의 지름](https://www.acmicpc.net/problem/1967) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week03/assignment02) |
+| [11437](https://www.acmicpc.net/problem/11437) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week03/assignment02) |
 | [2263 트리의 순회](https://www.acmicpc.net/problem/2263) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week03/assignment03) |
 
 <br>
