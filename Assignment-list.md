@@ -2,23 +2,13 @@
 
 <br>
 
-## [Week 00] Golang Basic
-
-| 주제 | 정리 자료 |
-| :--: | :-------: |
-|   Golang 기초 학습   |           |
-
-<br>
-
----
-
 ## [Week 01] BFS
 
 | 문제 | 풀이 코드 |
 | :--: | :-------: |
-| [1963 소수 경로](https://www.acmicpc.net/problem/1963) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/HyeonjinChoi/week01/1963%20%EC%86%8C%EC%88%98%20%EA%B2%BD%EB%A1%9C) |
-| [2638 치즈](https://www.acmicpc.net/problem/2638) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/HyeonjinChoi/week01/2638%20%EC%B9%98%EC%A6%88) |
-| [2146 다리 만들기](https://www.acmicpc.net/problem/2146) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/HyeonjinChoi/week01/2146%20%EB%8B%A4%EB%A6%AC%20%EB%A7%8C%EB%93%A4%EA%B8%B0) |
+| [1963 소수 경로](https://www.acmicpc.net/problem/1963) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week01/1963%20%EC%86%8C%EC%88%98%20%EA%B2%BD%EB%A1%9C) |
+| [2638 치즈](https://www.acmicpc.net/problem/2638) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week01/2638%20%EC%B9%98%EC%A6%88) |
+| [2146 다리 만들기](https://www.acmicpc.net/problem/2146) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week01/2146%20%EB%8B%A4%EB%A6%AC%20%EB%A7%8C%EB%93%A4%EA%B8%B0) |
 
 <br>
 
@@ -28,9 +18,9 @@
 
 |                             문제                             |                          풀이 코드                           |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| [16947 서울 지하철 2호선](https://www.acmicpc.net/problem/16947) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week01/16947%20%EC%84%9C%EC%9A%B8%20%EC%A7%80%ED%95%98%EC%B2%A0%202%ED%98%B8%EC%84%A0) |
-|   [1967 트리의 지름](https://www.acmicpc.net/problem/1967)   | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week01/1967%20%ED%8A%B8%EB%A6%AC%EC%9D%98%20%EC%A7%80%EB%A6%84) |
-|  [17471 게리맨더링](https://www.acmicpc.net/problem/17471)   | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week01/17471%20%EA%B2%8C%EB%A6%AC%EB%A7%A8%EB%8D%94%EB%A7%81) |
+| [16947 서울 지하철 2호선](https://www.acmicpc.net/problem/16947) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week02/assignment01) |
+|   [1967 트리의 지름](https://www.acmicpc.net/problem/1967)   | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week02/assignment02) |
+|  [17471 게리맨더링](https://www.acmicpc.net/problem/17471)   | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week02/assignment03) |
 
 <br>
 
@@ -40,15 +30,15 @@
 
 | 문제 | 풀이 코드 |
 | :--: | :-------: |
-|      |           |
-|      |           |
-|      |           |
+| [4386 별자리 만들기](https://www.acmicpc.net/problem/4386) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week03/assignment01) |
+| [11437 LCA](https://www.acmicpc.net/problem/11437) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week03/assignment02) |
+| [2263 트리의 순회](https://www.acmicpc.net/problem/2263) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week03/assignment03) |
 
 <br>
 
 ---
 
-## [Week 04] Simulation
+## [Week 04] Segment Tree
 
 | 문제 | 풀이 코드 |
 | :--: | :-------: |
@@ -60,7 +50,7 @@
 
 ---
 
-## [Week 05] Sorting
+## [Week 05] Simulation
 
 | 문제 | 풀이 코드 |
 | :--: | :-------: |
@@ -72,7 +62,7 @@
 
 ---
 
-## [Week 06] Greedy
+## [Week 06] Sorting
 
 | 문제 | 풀이 코드 |
 | :--: | :-------: |
@@ -84,7 +74,7 @@
 
 ---
 
-## [Week07] Brute Force
+## [Week 07] Greedy
 
 | 문제 | 풀이 코드 |
 | :--: | :-------: |
@@ -96,7 +86,19 @@
 
 ---
 
-## [Week 08] Dynamic
+## [Week08] Brute Force
+
+| 문제 | 풀이 코드 |
+| :--: | :-------: |
+|      |           |
+|      |           |
+|      |           |
+
+<br>
+
+---
+
+## [Week 09] Dynamic
 
 | 문제 | 풀이 코드 |
 | :--: | :-------: |
