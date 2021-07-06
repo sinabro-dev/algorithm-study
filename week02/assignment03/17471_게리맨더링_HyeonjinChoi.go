@@ -5,7 +5,7 @@ import "fmt"
 /*
 [커스텀 타입 및 전역 변수]
 1. type Queue
-같은 선거구인 구역들이 모두 연결되어있는지 확인할 떄 사용하기 위한 자류구조, 큐이다.
+같은 선거구인 구역들이 모두 연결되어있는지 확인할 때 사용하기 위한 자료구조, 큐이다.
 
 2. index
 배열을 참조하는 과정에서 조건에 충족하는 값의 인덱스를 나타내기 위한 변수로서, 체크포인트이다.
@@ -45,15 +45,15 @@ findMinDiff() 에서 0, 1을 각각 인자로 사용하여 함수를 실행시�
 
 [시간 복잡도]
 1. connectNode()
-구역의 수만큼 반복하여 입력 받기 때문에 O(N)이다.
+구역의 수만큼 반복하여 입력받기 때문에 O(N)이다.
 
 2-1. findMinDiff()
-구역의 수만큼 자릿수를 갖는 이진수를 돌아야하기 때문에 O(2^N + (iConnected() 의 시간복잡도))이다.
+구역의 수만큼 자릿수를 갖는 이진수를 돌아야하기 때문에 O(2^N)이다.
 
 2-2. isConnected()
 큐가 비어있을 때까지 모든 구역을 돌며 visitArr[] 을 확인하기 때문에 O(N^2)이다.
 
-따라서 O(N) + O(2^N) + O(N^2)이므로, O(2^N)이다.
+따라서 O(N) + O(2^N) * O(N^2)이므로, O(2^N)이다.
 */
 
 type Queue struct {
@@ -130,15 +130,11 @@ func findMinDiff() int {
 			num /= 2
 			visitArr[i] = false
 		}
-		fmt.Println("g(b):", groupArr) //test
 		isConnected(0)
 		isConnected(1)
-		fmt.Println("g(a):", groupArr) //test
-		fmt.Println("v:", visitArr)    //testtt
 		for index = 1; index < size+1; index++ {
 			if !visitArr[index] {
 				break
-			} else {
 			}
 		}
 
@@ -174,7 +170,6 @@ func isConnected(digit int) {
 	for index = 1; index < size+1; index++ {
 		if groupArr[index] == digit {
 			break
-		} else {
 		}
 	}
 
