@@ -113,14 +113,13 @@ func findMinCost() {
 		} else {
 			if nodeNumArr[data.node1] == 0 {
 				nodeNumArr[data.node1] = nodeNumArr[data.node2]
-				cost += data.distance
 			} else if nodeNumArr[data.node2] == 0 {
 				nodeNumArr[data.node2] = nodeNumArr[data.node1]
-				cost += data.distance
 			} else {
 				matchSeparateNum(nodeNumArr[data.node1], nodeNumArr[data.node2])
-				cost += data.distance
 			}
+
+			cost += data.distance
 		}
 	}
 }
