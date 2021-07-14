@@ -18,6 +18,7 @@ var (
 	nodeNum      int
 	inOrderArr   []int
 	postOrderArr []int
+	findIdxArr   []int
 )
 
 func init() {
@@ -43,9 +44,12 @@ func setting() {
 	nodeNum = scanInt()
 	inOrderArr = make([]int, nodeNum)
 	postOrderArr = make([]int, nodeNum)
+	findIdxArr = make([]int, nodeNum+1)
 
 	for i := 0; i < nodeNum; i++ {
 		inOrderArr[i] = scanInt()
+		// inOrderArr[]에 대한 역 인덱스 배열을 생성
+		findIdxArr[inOrderArr[i]] = i
 	}
 
 	for i := 0; i < nodeNum; i++ {
@@ -55,7 +59,7 @@ func setting() {
 
 // 인자로 받은 범위 내에서 루트를 찾고 출력, 이후 좌측 우측 자식정점 순으로 반복
 func solve(startIdx, endIdx, rootIdx int) {
-	midIdx := findIdx(postOrderArr[rootIdx])
+	midIdx := findIdxArr[postOrderArr[rootIdx]]
 	wr.WriteString(strconv.Itoa(inOrderArr[midIdx]) + " ")
 
 	if startIdx <= midIdx-1 {
@@ -65,15 +69,4 @@ func solve(startIdx, endIdx, rootIdx int) {
 	if midIdx+1 <= endIdx {
 		solve(midIdx+1, endIdx, rootIdx-1)
 	}
-}
-
-// inOrderArr[]에서 인자로 받은 값에 해당하는 인덱스를 찾는 함수
-func findIdx(num int) int {
-	for index, data := range inOrderArr {
-		if data == num {
-			return index
-		}
-	}
-
-	return -1
 }
