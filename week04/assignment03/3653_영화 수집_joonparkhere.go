@@ -23,30 +23,31 @@ func scanInt() int {
 
 func main() {
 	scanner.Split(bufio.ScanWords)
-	solve()
+	//solveVer1()
+	solveVer2()
 	writer.Flush()
 }
 
-func solve() {
+func solveVer1() {
 	numOfCase := scanInt()
 	for i := 0; i < numOfCase; i++ {
 		numOfDVD := scanInt()
 		numOfQuery := scanInt()
-		initTreeAndCache(numOfQuery, numOfDVD)
+		initTreeAndCacheVer1(numOfQuery, numOfDVD)
 
 		for j := 0; j < numOfQuery; j++ {
 			DVDIdx := scanInt()
-			position := findPartialSum(cache[DVDIdx])
+			position := findPartialSumVer1(cache[DVDIdx])
 			writer.WriteString(strconv.Itoa(position - 1) + " ")
 
 			numOfRemainQuery := numOfQuery - (j + 1)
-			updateTree(DVDIdx, numOfRemainQuery)
+			updateTreeVer1(DVDIdx, numOfRemainQuery)
 		}
 		writer.WriteString("\n")
 	}
 }
 
-func initTreeAndCache(numOfQuery, numOfDVD int) {
+func initTreeAndCacheVer1(numOfQuery, numOfDVD int) {
 	numOfLeafNode = int(math.Pow(2, math.Ceil(math.Log2(float64(numOfQuery + numOfDVD)))))
 	treeSize := int(math.Pow(2, math.Ceil(math.Log2(float64(numOfQuery + numOfDVD)) + 1)))
 	tree = make([]int, treeSize)
@@ -67,7 +68,7 @@ func initTreeAndCache(numOfQuery, numOfDVD int) {
 	}
 }
 
-func findPartialSum(target int) int {
+func findPartialSumVer1(target int) int {
 	partialSum := 0
 	treeIdx := 1
 	start := 1
@@ -91,7 +92,7 @@ func findPartialSum(target int) int {
 	}
 }
 
-func updateTree(dvdIdx, numOfRemainQuery int) {
+func updateTreeVer1(dvdIdx, numOfRemainQuery int) {
 	target := cache[dvdIdx]
 	treeIdxToRemove := numOfLeafNode + target - 1
 	treeIdxToInsert := numOfLeafNode + numOfRemainQuery
@@ -102,4 +103,48 @@ func updateTree(dvdIdx, numOfRemainQuery int) {
 		treeIdxToInsert /= 2
 	}
 	cache[dvdIdx] = numOfRemainQuery + 1
+}
+
+func solveVer2() {
+	numOfCase := scanInt()
+	for i := 0; i < numOfCase; i++ {
+		numOfDVD := scanInt()
+		numOfQuery := scanInt()
+
+		tree = make([]int, numOfDVD + numOfQuery + 1)
+		cache = make(map[int]int)
+
+		for idx := numOfQuery + 1; idx <= numOfDVD + numOfQuery; idx++ {
+			updateTreeVer2(idx, 1)
+			cache[idx - numOfQuery] = idx
+		}
+
+		for j := 0; j < numOfQuery; j++ {
+			DVDIdx := scanInt()
+			position := findPartialSumVer2(cache[DVDIdx])
+			writer.WriteString(strconv.Itoa(position - 1) + " ")
+
+			updateTreeVer2(cache[DVDIdx], -1)
+			numOfRemainQuery := numOfQuery - (j + 1)
+			cache[DVDIdx] = numOfRemainQuery + 1
+			updateTreeVer2(cache[DVDIdx], 1)
+		}
+		writer.WriteString("\n")
+	}
+}
+
+func updateTreeVer2(idx, diff int) {
+	for idx < len(tree) {
+		tree[idx] += diff
+		idx += idx & -idx
+	}
+}
+
+func findPartialSumVer2(idx int) int {
+	partialSum := 0
+	for idx >= 1 {
+		partialSum += tree[idx]
+		idx -= idx & -idx
+	}
+	return partialSum
 }
