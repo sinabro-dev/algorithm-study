@@ -50,19 +50,19 @@
 
 ---
 
-## [Week 05] Simulation
+## Week 05
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week05/assignment01) |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week05/assignment01) |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week05/assignment01) |
+| [1759 암호 만들기](https://www.acmicpc.net/problem/1759) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week05/assignment01) |
+| [2056 작업](https://www.acmicpc.net/problem/2056) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week05/assignment01) |
+| [1781 컵라면](https://www.acmicpc.net/problem/1781) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week05/assignment01) |
 
 <br>
 
 ---
 
-## [Week 06] Sorting
+## Week 06
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
@@ -74,7 +74,7 @@
 
 ---
 
-## [Week 07] Greedy
+## Week 07
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
@@ -86,7 +86,7 @@
 
 ---
 
-## [Week08] Brute Force
+## Week08
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
@@ -98,7 +98,7 @@
 
 ---
 
-## [Week 09] Dynamic
+## Week 09
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
