@@ -31,9 +31,6 @@ func (h *Heap) find(starIdx int) (int, Node) {
 
 // starIdx 를 갖는 별을 priority 기준으로 알맞은 위치를 찾고 해당 위치에 삽입
 func (h *Heap) insert(starIdx int, priority float64) {
-	//if h.size == maxNumOfStar {
-	//	return
-	//}
 	idx := h.size + 1
 	for idx > 1 {
 		parent := h.getParent(idx)
