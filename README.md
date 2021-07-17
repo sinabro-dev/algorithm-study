@@ -8,8 +8,8 @@
 
 |                 스터디원                  | 사용 언어 |
 | :---------------------------------------: | :-------: |
-| [박승호](https://github.com/joonparkhere) |  Golang   |
-| [최현진](https://github.com/HyeonjinChoi) |  Golang   |
+| [박승호](https://github.com/joonparkhere) | Golang, C++ |
+| [최현진](https://github.com/HyeonjinChoi) | Golang, C++ |
 
 <br>
 
@@ -24,9 +24,9 @@
 
 <br>
 
-### BOJ  / LeetCode 풀이
+### 다양한 플랫폼의 코딩 테스트 풀이
 
-BOJ 와 LeetCode 순으로, 백준 기준 골드 난이도의 문제를 주차별 알고리즘에 맞춰 풀이합니다. ([과제 목록](https://github.com/joonparkhere/algorithm-study/blob/main/Assignment-list.md))
+BOJ, Programmers 그리고 LeetCode에서의 백준 기준 골드 난이도의 문제를 풀이합니다. ([과제 목록](https://github.com/joonparkhere/algorithm-study/blob/main/Assignment-list.md))
 
 <br>
 
@@ -63,15 +63,11 @@ TBD.
 
 ### Code Convention
 
-- 상호 간의 원활한 코드 리뷰를 위해 클린 코드를 지향합니다.
-
-  메서드와 변수의 네이밍을 역할에 맞게 선정합니다.
-
-  불필요한 주석은 달지 않습니다.
-
-- 시간 복잡도 명시
-
-  보다 효율적인 알고리즘을 위해, 풀이 코드의 시간 복잡도를 명시합니다.
+- 상호 간의 원활한 코드 리뷰를 위해 클린 코드를 지향합니다. 
+  
+- 메서드와 변수의 네이밍을 역할에 맞게 선정합니다.
+  
+- 불필요한 주석은 달지 않습니다.
 
 <br>
 
@@ -82,26 +78,32 @@ TBD.
   ```
   docs: README.md 등 문서 작성 및 수정
   code: 풀이 코드 제출
-  fix: 풀이 코드 수정
   merge: 자신의 Branch에서 Master Branch로 병합
   ```
 
 
-- 개인 Branch 명은 Github 닉네임으로 설정합니다.
+- 개인 Branch 명은 Github 닉네임을 토대로 설정합니다.
 
 <br>
 
 ### Pull Request Convention
 
-- PR 제목은 `이름: 문제 번호 및 제목`으로 작성합니다.
+- PR 제목은 `[난이도]문제 번호 및 제목`으로 작성합니다.
 
-  만약 BOJ에서 1234번 도시 찾기라는 문제에 대한 과제를 제출한다면, `홍길동: BOJ 1234 도시 찾기`으로 설정합니다.
+- 출처 사이트, 사용 언어, 알고리즘 종류 등은 PR Label로 등록합니다.
+  
+  만약 BOJ에서 1234번 크리스마스 트리라는 문제를 Golang 으로 풀이한 경우라면, 아래와 같이 설정합니다.
+
+  ```
+  제목: [G1] 1234 크리스마스 트리
+  태그: #BOJ #Go #Math #Dynamic
+  ```
+  
+- PR 본문에는 대략적인 풀이와 소요 메모리, 시간을 명시합니다.
 
 - 1명 이상의 Reviewer 설정
 
   스터디원 중 최소 1명을 Reviewer로 설정합니다.
-
-- PR Label 에는 해당 문제의 알고리즘 종류와 난이도를 명시합니다.
 
 <br>
 
