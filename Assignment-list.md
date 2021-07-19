@@ -67,9 +67,8 @@
 | 문제 | 풀이 코드 |
 | :---: | :---: |
 | [[LeetCode] 122 Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment01) |
-| [[LeetCode] 205 Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment02) |
-| [[BOJ] 14890 경사로](https://www.acmicpc.net/problem/14890) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment03) |
-| [[BOJ] 1014 컨닝](https://www.acmicpc.net/problem/1014) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment04) |
+| [[BOJ] 2613 숫자구슬](https://www.acmicpc.net/problem/2613) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment02) |
+| [[BOJ] 10253 헨리](https://www.acmicpc.net/problem/10253) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment03) |
 
 <br>
 
