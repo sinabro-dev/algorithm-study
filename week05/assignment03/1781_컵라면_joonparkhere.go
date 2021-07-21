@@ -50,9 +50,12 @@ func solve() {
 	result := 0
 	for deadline := numOfTask; deadline >= 1; deadline-- {
 		for _, reward := range info[deadline] {
-			maxHeap.insert(reward)
+			maxHeap.push(reward)
 		}
-		result += maxHeap.delete()
+		if maxHeap.size == 0 {
+			continue
+		}
+		result += maxHeap.pop()
 	}
 	writer.WriteString(strconv.Itoa(result))
 }
@@ -62,7 +65,7 @@ type heap struct {
 	size int
 }
 
-func (h *heap) insert(priority int) {
+func (h *heap) push(priority int) {
 	idx := h.size + 1
 	for idx > 1 {
 		parent := idx / 2
@@ -76,10 +79,7 @@ func (h *heap) insert(priority int) {
 	h.size++
 }
 
-func (h *heap) delete() int {
-	if h.size == 0 {
-		return 0
-	}
+func (h *heap) pop() int {
 	root := h.items[1]
 	last := h.items[h.size]
 	parent := 1
