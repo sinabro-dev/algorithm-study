@@ -66,7 +66,7 @@
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
-| [[LeetCode] 122 Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment01) |
+| [[LEET] 122 Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment01) |
 | [[BOJ] 2613 숫자구슬](https://www.acmicpc.net/problem/2613) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment02) |
 | [[BOJ] 10253 헨리](https://www.acmicpc.net/problem/10253) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week06/assignment03) |
 
@@ -78,9 +78,9 @@
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
-| [[Programmers] 43162 네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment01) |
-| [[Programmers] 42627 디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment02) |
-| [[Programmers] 42861 섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment03) |
+| [[PROG] 43162 네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment01) |
+| [[PROG] 42627 디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment02) |
+| [[PROG] 42861 섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment03) |
 
 <br>
 
