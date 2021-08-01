@@ -78,9 +78,9 @@
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment01) |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment02) |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment03) |
+| [[Programmers] 네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment01) |
+| [[Programmers] 디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment02) |
+| [[Programmers] 섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week07/assignment03) |
 
 <br>
 
