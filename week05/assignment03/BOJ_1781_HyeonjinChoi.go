@@ -63,7 +63,7 @@ func (h *MaxHeap) Swap(i, j int) {
 }
 
 func (h *MaxHeap) Compare(i, j int) bool {
-	return (*h)[i] > (*h)[j]
+	return (*h)[i] < (*h)[j]
 }
 
 func ParentNode(i int) int {
@@ -110,7 +110,7 @@ func solve() {
 	// 우선순위 큐를 이용하여 조건에 부합하는 보상 저장
 	for i := 0; i < assNum; i++ {
 		dealine := assignment[i].deadline
-		priorityQueue.Push(-assignment[i].reward)
+		priorityQueue.Push(assignment[i].reward)
 
 		if len(*priorityQueue) > dealine {
 			priorityQueue.Pop()
@@ -121,7 +121,7 @@ func solve() {
 		answer += priorityQueue.Pop()
 	}
 
-	wr.WriteString(strconv.Itoa(-answer))
+	wr.WriteString(strconv.Itoa(answer))
 }
 
 // 데드라인과 보상(컵라면수)에 대한 입력을 받음
