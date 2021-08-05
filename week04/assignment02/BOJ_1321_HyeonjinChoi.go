@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"math"
 	"os"
 	"strconv"
 )
@@ -33,26 +34,26 @@ func main() {
 
 func setting() {
 	unitNum = scanInt()
-	treeArr = make([]int, 100000001)
+	treeArr = make([]int, int(math.Pow(2, math.Ceil(math.Log2(float64(unitNum)))+1)))
 
 	for i := 1; i <= unitNum; i++ {
-		generateTree(1, unitNum, i, scanInt(), 1)
+		updateTree(1, unitNum, i, 1)
 	}
 }
 
 // index에 해당하는 부대에 num 값을 할당하는 함수
-func generateTree(startIdx, endIdx, index, num, node int) {
-	midIdx := (startIdx + endIdx) / 2
-
+func updateTree(startIdx, endIdx, index, node int) {
 	if startIdx == endIdx {
-		treeArr[node] += num
+		treeArr[node] += scanInt()
 		return
 	}
 
+	midIdx := (startIdx + endIdx) / 2
+
 	if index <= midIdx {
-		generateTree(startIdx, midIdx, index, num, node*2)
+		updateTree(startIdx, midIdx, index, node*2)
 	} else {
-		generateTree(midIdx+1, endIdx, index, num, node*2+1)
+		updateTree(midIdx+1, endIdx, index, node*2+1)
 	}
 
 	// 구간 내 부대의 군사 수를 합
@@ -64,7 +65,7 @@ func printAnswer() {
 
 	for i := 0; i < count; i++ {
 		if scanInt() == 1 {
-			generateTree(1, unitNum, scanInt(), scanInt(), 1)
+			updateTree(1, unitNum, scanInt(), 1)
 		} else {
 			wr.WriteString(strconv.Itoa(findUnitNum(1, unitNum, scanInt(), 1)) + "\n")
 		}
