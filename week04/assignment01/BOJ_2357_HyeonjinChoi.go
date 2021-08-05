@@ -13,7 +13,6 @@ var (
 	intNum     int
 	pairNum    int
 	height     int
-	treeArr    []int
 	minTreeArr []int
 	maxTreeArr []int
 )
@@ -40,26 +39,22 @@ func main() {
 func setting() {
 	intNum, pairNum = scanInt(), scanInt()
 	height = int(math.Ceil(math.Log2(float64(intNum))))
-	treeArr = make([]int, intNum+1)
 	minTreeArr = make([]int, (1 << (height + 1)))
 	maxTreeArr = make([]int, (1 << (height + 1)))
-
-	for i := 0; i < intNum; i++ {
-		treeArr[i] = scanInt()
-	}
 }
 
 // 세그먼트 트리처럼 각 구간에 합 대신 최솟값, 최댓값을 저장하는 트리 생성
 func generateSegmentTree(startIdx, endIdx, index int) {
 	if startIdx == endIdx {
-		minTreeArr[index] = treeArr[startIdx]
-		maxTreeArr[index] = treeArr[startIdx]
+		num := scanInt()
+		minTreeArr[index] = num
+		maxTreeArr[index] = num
 	} else {
 		midIdx := (startIdx + endIdx) / 2
 		generateSegmentTree(startIdx, midIdx, index*2)
 		generateSegmentTree(midIdx+1, endIdx, index*2+1)
-		minTreeArr[index] = int(math.Min(float64(minTreeArr[index*2]), float64(minTreeArr[index*2+1])))
-		maxTreeArr[index] = int(math.Max(float64(maxTreeArr[index*2]), float64(maxTreeArr[index*2+1])))
+		minTreeArr[index] = min(minTreeArr[index*2], minTreeArr[index*2+1])
+		maxTreeArr[index] = max(maxTreeArr[index*2], maxTreeArr[index*2+1])
 	}
 }
 
@@ -84,6 +79,22 @@ func findAnswer(startIdx, endIdx, leftNode, rightNode, index int) (int, int) {
 		midIdx := (startIdx + endIdx) / 2
 		leftMin, leftMax := findAnswer(startIdx, midIdx, leftNode, rightNode, index*2)
 		rightMin, rightMax := findAnswer(midIdx+1, endIdx, leftNode, rightNode, index*2+1)
-		return int(math.Min(float64(leftMin), float64(rightMin))), int(math.Max(float64(leftMax), float64(rightMax)))
+		return min(leftMin, rightMin), max(leftMax, rightMax)
+	}
+}
+
+func max(num1, num2 int) int {
+	if num1 > num2 {
+		return num1
+	} else {
+		return num2
+	}
+}
+
+func min(num1, num2 int) int {
+	if num1 < num2 {
+		return num1
+	} else {
+		return num2
 	}
 }
