@@ -37,14 +37,14 @@ func scanByte() byte {
 func main() {
 	defer wr.Flush()
 	setting()
-	solve(0, -1, 0, 0)
+	solve(0, -1, 0)
 }
 
 func setting() {
 	answerLen, inputLen = scanInt(), scanInt()
-	answerArr = make([]byte, 15)
+	answerArr = make([]byte, (1 << answerLen))
 	inputArr = make([]byte, inputLen)
-	checkVowel = make([]bool, 26)
+	checkVowel = make([]bool, inputLen)
 
 	for i := 0; i < inputLen; i++ {
 		inputArr[i] = scanByte()
@@ -63,10 +63,10 @@ func setting() {
 	}
 }
 
-func solve(position, previous, consonant, vowel int) {
+func solve(position, previous, vowel int) {
 	if position == answerLen {
 		// 단어 길이도 조건에 부합하고, 자음 및 모음의 수도 조건에 부합하면 출력
-		if consonant >= 2 && vowel >= 1 {
+		if vowel >= 1 && vowel+2 <= answerLen {
 			for i := 0; i < answerLen; i++ {
 				wr.WriteString(string(answerArr[i]))
 			}
@@ -77,13 +77,12 @@ func solve(position, previous, consonant, vowel int) {
 
 	// 정렬된 문자들을 바탕으로 재귀 방식을 통한 탐색
 	for i := previous + 1; i < inputLen; i++ {
-		current := inputArr[i]
-		answerArr[position] = current
+		answerArr[position] = inputArr[i]
 
 		if checkVowel[i] {
-			solve(position+1, i, consonant, vowel+1)
+			solve(position+1, i, vowel+1)
 		} else {
-			solve(position+1, i, consonant+1, vowel)
+			solve(position+1, i, vowel)
 		}
 	}
 }
