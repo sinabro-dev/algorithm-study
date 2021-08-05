@@ -50,27 +50,11 @@ func setting() {
 	dvdPos = make([]int, max)
 
 	n, m = scanInt(), scanInt()
-	initTree(1, 1, n+m)
 
 	for i := 1; i <= n; i++ {
 		dvdPos[i] = m + i
 		update(1, 1, n+m, dvdPos[i], 1)
 	}
-}
-
-// DVD 위치 초기화
-func initTree(node, startNode, endNode int) {
-	treeArr[node] = 0
-
-	if startNode == endNode {
-		return
-	}
-
-	left := node * 2
-	right := node*2 + 1
-	midNode := (startNode + endNode) / 2
-	initTree(left, startNode, midNode)
-	initTree(right, midNode+1, endNode)
 }
 
 // index에 해당하는 말단 정점을 value 값으로 갱신
