@@ -90,9 +90,9 @@
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week08/assignment01) |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week08/assignment02) |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week08/assignment03) |
+| [[BOJ] 2213 트리의 독립집합](https://www.acmicpc.net/problem/2213) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week08/assignment01) |
+| [[LEET] 146 LRU Cache](https://leetcode.com/problems/lru-cache/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week08/assignment02) |
+| [[BOJ] 1013 Contact](https://www.acmicpc.net/problem/1013) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week08/assignment03) |
 
 <br>
 
