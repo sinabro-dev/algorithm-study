@@ -102,9 +102,9 @@
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week09/assignment01) |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week09/assignment02) |
-|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week09/assignment03) |
+| [[BOJ] 1563 개근상](https://www.acmicpc.net/problem/1563) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week09/assignment01) |
+| [[BOJ] 1516 게임 개발](https://www.acmicpc.net/problem/1516) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week09/assignment02) |
+| [[BOJ] 2589 보물섬](https://www.acmicpc.net/problem/2589) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week09/assignment03) |
 
 <br>
 
