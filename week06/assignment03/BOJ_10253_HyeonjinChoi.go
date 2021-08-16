@@ -45,11 +45,8 @@ func calc(numerator, denominator int) int {
 		denominator = denominator * x
 		
 		gcd := findGcd(numerator, denominator)
-
-		if gcd != -1 {
-			numerator /= gcd
-			denominator /= gcd
-		}
+		numerator /= gcd
+		denominator /= gcd
 	}
 
 	return denominator
