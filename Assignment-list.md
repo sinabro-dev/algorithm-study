@@ -110,5 +110,17 @@
 
 ---
 
+## Week 10
+
+| 문제 | 풀이 코드 |
+| :---: | :---: |
+| [[LEET] 925 Long Pressed Name](https://leetcode.com/problems/long-pressed-name/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week10/assignment01) |
+| [[LEET] 208 Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week10/assignment02) |
+| [[BOJ] 16197 두 동전](https://www.acmicpc.net/problem/16197) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week10/assignment03) |
+
+<br>
+
+---
+
 
 
