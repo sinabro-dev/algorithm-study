@@ -8,7 +8,7 @@
 
 |                 스터디원                  | 사용 언어 |
 | :---------------------------------------: | :-------: |
-| [박승호](https://github.com/joonparkhere) | Golang, C++ |
+| [박승호](https://github.com/joonparkhere) | Golang, Java, C++ |
 | [최현진](https://github.com/HyeonjinChoi) | Golang, C++ |
 
 <br>
