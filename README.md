@@ -113,3 +113,10 @@ TBD.
 
 제안의 정도에 따라서 **Approve Changes** 혹은 **Request Changes**를 선택해 리뷰를 남깁니다.
 
+<br>
+
+### Penalty
+해당 주차 과제를 일요일 23:59 까지 풀지 못했을 경우, [Penalty](https://github.com/joonparkhere/algorithm-study/blob/main/Penalty.md)에 풀지 못한 과제목록을 작성합니다.
+
+그리고 풀지 못한 과제수만큼 페널티를 부여합니다.
+
