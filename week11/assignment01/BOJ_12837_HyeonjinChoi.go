@@ -40,12 +40,12 @@ func setting() {
 
 func solve() {
 	for i := 0; i < numOfQuery; i++ {
-		separatorNum, days, price := scanInt(), scanInt(), scanInt()
+		separatorNum, day, priceOrDay := scanInt(), scanInt(), scanInt()
 
 		if separatorNum == 1 {
-			update(1, 1, daysLived, days, price)
+			update(1, 1, daysLived, day, priceOrDay)
 		} else {
-			wr.WriteString(strconv.Itoa(query(1, 1, daysLived, days, price)) + "\n")
+			wr.WriteString(strconv.Itoa(query(1, 1, daysLived, day, priceOrDay)) + "\n")
 		}
 	}
 }
@@ -56,15 +56,15 @@ func update(node, start, end, index, value int) {
 		return
 	}
 
-	mid := (start + end) / 2
+	mid := (start + end) >> 1
 
 	if index <= mid {
-		update(2*node, start, mid, index, value)
+		update(node<<1, start, mid, index, value)
 	} else {
-		update(2*node+1, mid+1, end, index, value)
+		update((node<<1)+1, mid+1, end, index, value)
 	}
 
-	tree[node] = tree[2*node] + tree[2*node+1]
+	tree[node] = tree[node<<1] + tree[(node<<1)+1]
 }
 
 func query(node, start, end, queryStart, queryEnd int) int {
@@ -76,7 +76,7 @@ func query(node, start, end, queryStart, queryEnd int) int {
 		return tree[node]
 	}
 
-	mid := (start + end) / 2
+	mid := (start + end) >> 1
 
-	return query(2*node, start, mid, queryStart, queryEnd) + query(2*node+1, mid+1, end, queryStart, queryEnd)
+	return query(node<<1, start, mid, queryStart, queryEnd) + query((node<<1)+1, mid+1, end, queryStart, queryEnd)
 }
