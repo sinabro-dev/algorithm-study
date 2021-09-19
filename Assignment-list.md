@@ -145,3 +145,15 @@
 <br>
 
 ---
+
+## Week 13
+
+| 문제 | 풀이 코드 |
+| :---: | :---: |
+| [[BOJ] 1647 도시 분할 계획](https://www.acmicpc.net/problem/1647) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week13/assignment01) |
+| [[BOJ] 1238 파티](https://www.acmicpc.net/problem/1238) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week13/assignment02) |
+| [[BOJ] 11779 최소비용 구하기 2](https://www.acmicpc.net/problem/11779) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week13/assignment03) |
+
+<br>
+
+---
