@@ -116,7 +116,8 @@ TBD.
 <br>
 
 ### Penalty
-해당 주차 과제를 일요일 23:59 까지 풀지 못했을 경우, [Penalty](https://github.com/joonparkhere/algorithm-study/blob/main/Penalty.md)에 풀지 못한 과제목록을 작성합니다.
-
-그리고 풀지 못한 과제수만큼 페널티를 부여합니다.
+| 스터디원 | 지각 제출 | 미제출 |
+| :---: | :---: | :---: |
+| @joonparkhere  | 0 | 0 |
+| @HyeonjinChoi  | 0 | 0 |
 
