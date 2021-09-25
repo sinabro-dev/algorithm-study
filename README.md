@@ -119,5 +119,5 @@ TBD.
 | 스터디원 | 지각 제출 | 미제출 |
 | :---: | :---: | :---: |
 | @joonparkhere  | 0 | 0 |
-| @HyeonjinChoi  | 3 | 3 |
+| @HyeonjinChoi  | 0 | 0 |
 
