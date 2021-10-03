@@ -141,9 +141,9 @@
 | [[LEET] 101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment01) |
 | [[LEET] 743 Network Delay Time](https://leetcode.com/problems/network-delay-time/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment02) |
 | [[PROG] 43238 입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment03) |
-| []() | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment01) |
-| []() | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment02) |
-| []() | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment03) |
+| [[BOJ] 2217 로프](https://www.acmicpc.net/problem/2217) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment01) |
+| [[BOJ] 2583 영역 구하기](https://www.acmicpc.net/problem/2583) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment02) |
+| [[BOJ] 1766 문제집](https://www.acmicpc.net/problem/1766) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment03) |
 
 <br>
 
