@@ -138,9 +138,12 @@
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
-| [[BOJ] 17281 ⚾](https://www.acmicpc.net/problem/17281) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment01) |
-| [[LEET] 99 Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment02) |
-| [[LEET] 93 Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment03) |
+| [[LEET] 101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment01) |
+| [[LEET] 743 Network Delay Time](https://leetcode.com/problems/network-delay-time/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment02) |
+| [[PROG] 43238 입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment03) |
+| []() | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment01) |
+| []() | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment02) |
+| []() | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment03) |
 
 <br>
 
