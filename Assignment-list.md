@@ -142,10 +142,6 @@
 |  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment02) |
 |  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment03) |
 
-[[BOJ] 2217 로프](https://www.acmicpc.net/problem/2217)
-[[BOJ] 2583 영역 구하기](https://www.acmicpc.net/problem/2583)
-[[BOJ] 1766 문제집](https://www.acmicpc.net/problem/1766)
-
 <br>
 
 ---
@@ -156,10 +152,13 @@
 
 1. [[LEET] 101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 2. [[LEET] 743 Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+3. [[BOJ] 2217 로프](https://www.acmicpc.net/problem/2217)
+4. [[BOJ] 2583 영역 구하기](https://www.acmicpc.net/problem/2583)
 
 ### Challenge
 
 1. [[PROG] 43238 입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)
+2. [[BOJ] 1766 문제집](https://www.acmicpc.net/problem/1766)
 
 <br>
 
