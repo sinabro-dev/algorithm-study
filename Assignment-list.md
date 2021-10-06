@@ -138,21 +138,27 @@
 
 | 문제 | 풀이 코드 |
 | :---: | :---: |
-| [[BOJ] 17281 ⚾](https://www.acmicpc.net/problem/17281) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment01) |
-| [[LEET] 99 Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment02) |
-| [[LEET] 93 Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment03) |
+|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment01) |
+|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment02) |
+|  | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week12/assignment03) |
 
 <br>
 
 ---
 
-## Week 13
+## Pending
 
-| 문제 | 풀이 코드 |
-| :---: | :---: |
-| [[BOJ] 1647 도시 분할 계획](https://www.acmicpc.net/problem/1647) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week13/assignment01) |
-| [[BOJ] 1238 파티](https://www.acmicpc.net/problem/1238) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week13/assignment02) |
-| [[BOJ] 11779 최소비용 구하기 2](https://www.acmicpc.net/problem/11779) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week13/assignment03) |
+### Usual
+
+1. [[LEET] 101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+2. [[LEET] 743 Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+3. [[BOJ] 2217 로프](https://www.acmicpc.net/problem/2217)
+4. [[BOJ] 2583 영역 구하기](https://www.acmicpc.net/problem/2583)
+
+### Challenge
+
+1. [[PROG] 43238 입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238)
+2. [[BOJ] 1766 문제집](https://www.acmicpc.net/problem/1766)
 
 <br>
 
