@@ -8,15 +8,8 @@ import (
 )
 
 var (
-	graph [][]int
-	dRow  = []int{1, 0, -1, 0}
-	dCol  = []int{0, 1, 0, -1}
+	graph [][]bool
 )
-
-type pos struct {
-	row int
-	col int
-}
 
 func main() {
 	defer writer.Flush()
@@ -29,16 +22,16 @@ func setUp() {
 	inputArr := scanIntArray()
 	rowSize, colSize := inputArr[0], inputArr[1]
 
-	graph = make([][]int, rowSize)
+	graph = make([][]bool, rowSize)
 	for i := range graph {
-		graph[i] = make([]int, colSize)
+		graph[i] = make([]bool, colSize)
 	}
 
 	for i := 0; i < inputArr[2]; i++ {
 		squarePosition := scanIntArray()
 		for row := squarePosition[1]; row < squarePosition[3]; row++ {
 			for col := squarePosition[0]; col < squarePosition[2]; col++ {
-				graph[row][col] = -1
+				graph[row][col] = true
 			}
 		}
 	}
@@ -46,9 +39,11 @@ func setUp() {
 
 func solve() {
 	areas := make([]int, 0)
-	for i := 0; i < len(graph); i++ {
-		for j := 0; j < len(graph[0]); j++ {
-			if graph[i][j] < 0 {
+	rowSize, colSize := len(graph), len(graph[0])
+
+	for i := 0; i < rowSize; i++ {
+		for j := 0; j < colSize; j++ {
+			if graph[i][j] {
 				continue
 			}
 
@@ -57,10 +52,7 @@ func solve() {
 		}
 	}
 
-	sort.Slice(areas, func(i, j int) bool {
-		return areas[i] < areas[j]
-	})
-
+	sort.Ints(areas)
 	writer.WriteString(strconv.Itoa(len(areas)) + "\n")
 	for _, area := range areas {
 		writer.WriteString(strconv.Itoa(area) + " ")
@@ -68,33 +60,46 @@ func solve() {
 }
 
 func bfs(row, col int) int {
-	queue := make([]pos, 0)
+	queue := make([][2]int, 0)
 
 	numOfArea := 1
-	queue = append(queue, pos{row, col})
-	graph[row][col] = -1
+	graph[row][col] = true
+	queue = append(queue, [2]int{row, col})
+
+	dRow := []int{1, 0, -1, 0}
+	dCol := []int{0, 1, 0, -1}
 
 	for len(queue) != 0 {
-		curPos := queue[0]
+		curRow, curCol := queue[0][0], queue[0][1]
 		queue = queue[1:]
 
-		for i := 0; i < 4; i++ {
-			nextRow := curPos.row + dRow[i]
-			nextCol := curPos.col + dCol[i]
-
-			if nextRow < 0 || nextRow >= len(graph) || nextCol < 0 || nextCol >= len(graph[0]) {
+		for i := 0; i < len(dRow); i++ {
+			nextRow, nextCol := curRow + dRow[i], curCol + dCol[i]
+			if isOutOfIndex(nextRow, nextCol) {
 				continue
 			}
 
-			if graph[nextRow][nextCol] >= 0 {
+			if !graph[nextRow][nextCol] {
 				numOfArea++
-				graph[nextRow][nextCol] = -1
-				queue = append(queue, pos{nextRow, nextCol})
+				graph[nextRow][nextCol] = true
+				queue = append(queue, [2]int{nextRow, nextCol})
 			}
 		}
 	}
 
 	return numOfArea
+}
+
+func isOutOfIndex(row, col int) bool {
+	rowSize, colSize := len(graph), len(graph[0])
+
+	if row < 0 || row >= rowSize {
+		return true
+	}
+	if col < 0 || col >= colSize {
+		return true
+	}
+	return false
 }
 
 var (
