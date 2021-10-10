@@ -151,11 +151,14 @@
 ### Usual
 
 1. [[LEET] 101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
-2. [[BOJ] 2217 로프](https://www.acmicpc.net/problem/2217) 
+2. [[BOJ] 2217 로프](https://www.acmicpc.net/problem/2217)
+3. [[BOJ] 1365 꼬인 전깃줄](https://www.acmicpc.net/problem/1365)
+4. [[BOJ] 2239 스도쿠](https://www.acmicpc.net/problem/2239)
 
 ### Challenge
 
 1. [[BOJ] 1766 문제집](https://www.acmicpc.net/problem/1766)
+2. [[PROG] 12952 N-Queen](https://programmers.co.kr/learn/courses/30/lessons/12952)
 
 <br>
 
