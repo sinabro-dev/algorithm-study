@@ -154,11 +154,14 @@
 2. [[BOJ] 2217 로프](https://www.acmicpc.net/problem/2217)
 3. [[BOJ] 1365 꼬인 전깃줄](https://www.acmicpc.net/problem/1365)
 4. [[BOJ] 2239 스도쿠](https://www.acmicpc.net/problem/2239)
+5. [[BOJ] 13424 비밀 모임](https://www.acmicpc.net/problem/13424)
+6. [[BOJ] 1507 궁금한 민호](https://www.acmicpc.net/problem/1507)
 
 ### Challenge
 
 1. [[BOJ] 1766 문제집](https://www.acmicpc.net/problem/1766)
 2. [[PROG] 12952 N-Queen](https://programmers.co.kr/learn/courses/30/lessons/12952)
+3. [[PROG] 42579 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
 
 <br>
 
