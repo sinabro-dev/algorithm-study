@@ -146,16 +146,32 @@
 
 ---
 
+## Week 13
+
+| 문제 | 풀이 코드 |
+| :---: | :---: |
+| [[BOJ] 2239 스도쿠](https://www.acmicpc.net/problem/2239) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week13/assignment01) |
+| [[BOJ] 13424 비밀 모임](https://www.acmicpc.net/problem/13424) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week13/assignment02) |
+| [[PROG] 12952 N-Queen](https://programmers.co.kr/learn/courses/30/lessons/12952) | [풀이](https://github.com/joonparkhere/algorithm-study/tree/main/week13/assignment03) |
+
+<br>
+
+---
+
+
 ## Pending
 
 ### Usual
 
 1. [[LEET] 101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
-2. [[BOJ] 2217 로프](https://www.acmicpc.net/problem/2217) 
+2. [[BOJ] 2217 로프](https://www.acmicpc.net/problem/2217)
+3. [[BOJ] 1365 꼬인 전깃줄](https://www.acmicpc.net/problem/1365)
+4. [[BOJ] 1507 궁금한 민호](https://www.acmicpc.net/problem/1507)
 
 ### Challenge
 
 1. [[BOJ] 1766 문제집](https://www.acmicpc.net/problem/1766)
+2. [[PROG] 42579 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
 
 <br>
 
