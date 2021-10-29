@@ -1,95 +1,88 @@
 package assignment01;
 
 import java.io.*;
+import java.util.*;
 
 public class BOJ_2239_joonparkhere {
 
     static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static final BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static final int SUDOKU_SIZE = 9;
 
-    static int[][] board = new int[9][9];
-    static boolean[][] isRowExist = new boolean[9][10];
-    static boolean[][] isColExist = new boolean[9][10];
-    static boolean[][] isBlockExist = new boolean[9][10];
+    static int[][] board = new int[SUDOKU_SIZE][SUDOKU_SIZE];
+    static List<int[]> candidateList = new ArrayList<>();
+    static boolean[][] isBlockExist = new boolean[SUDOKU_SIZE][SUDOKU_SIZE + 1];
+    static boolean[][] isRowExist = new boolean[SUDOKU_SIZE][SUDOKU_SIZE + 1];
+    static boolean[][] isColExist = new boolean[SUDOKU_SIZE][SUDOKU_SIZE + 1];
 
     public static void main(String[] args) throws IOException {
         init();
         check(0);
     }
 
+    private static void updateExist(int row, int col, int value) {
+        int blockIdx = 3 * (row / 3) + (col / 3);
+        isBlockExist[blockIdx][value] = !isBlockExist[blockIdx][value];
+        isRowExist[row][value] = !isRowExist[row][value];
+        isColExist[col][value] = !isColExist[col][value];
+    }
+
     static void init() throws IOException {
-        int cur = 0;
-        for (int i = 0; i < 9; i++) {
+        for (int row = 0; row < SUDOKU_SIZE; row++) {
             String inputStr = br.readLine();
 
-            for (char c : inputStr.toCharArray()) {
-                int row = cur / 9;
-                int col = cur % 9;
+            for (int col = 0; col < SUDOKU_SIZE; col++) {
+                int value = inputStr.charAt(col) - '0';
+                board[row][col] = value;
 
-                int num = c - '0';
-                board[row][col] = num;
-                if (num != 0) {
-                    isRowExist[row][num] = true;
-                    isColExist[col][num] = true;
-                    isBlockExist[3 * (row / 3) + (col / 3)][num] = true;
+                if (value == 0) {
+                    candidateList.add(new int[]{row, col});
+                } else {
+                    updateExist(row, col, value);
                 }
-
-                cur++;
             }
         }
     }
 
-    static void check(int cur) throws IOException {
-        if (cur == 81) {
+    static void check(int idx) throws IOException {
+        if (idx == candidateList.size()) {
             print();
             System.exit(0);
         }
 
-        int row = cur / 9;
-        int col = cur % 9;
+        int[] candidate = candidateList.get(idx);
+        int row = candidate[0], col = candidate[1];
 
-        if (board[row][col] != 0) {
-            check(cur + 1);
-            return;
-        }
-
-        for (int num = 1; num <= 9; num++) {
-            if (!isValid(cur, num))
+        for (int value = 1; value <= SUDOKU_SIZE; value++) {
+            if (!isValid(row, col, value))
                 continue;
 
-            isRowExist[row][num] = true;
-            isColExist[col][num] = true;
-            isBlockExist[3 * (row / 3) + (col / 3)][num] = true;
-            board[row][col] = num;
+            updateExist(row, col, value);
+            board[row][col] = value;
 
-            check(cur + 1);
+            check(idx + 1);
 
-            isRowExist[row][num] = false;
-            isColExist[col][num] = false;
-            isBlockExist[3 * (row / 3) + (col / 3)][num] = false;
+            updateExist(row, col, value);
             board[row][col] = 0;
         }
     }
 
-    private static boolean isValid(int cur, int num) {
-        int row = cur / 9;
-        int col = cur % 9;
-
-        if (isRowExist[row][num])
+    private static boolean isValid(int row, int col, int value) {
+        int blockIdx = 3 * (row / 3) + (col / 3);
+        if (isBlockExist[blockIdx][value])
             return false;
-        if (isColExist[col][num])
+        if (isRowExist[row][value])
             return false;
-        if (isBlockExist[3 * (row / 3) + (col / 3)][num])
+        if (isColExist[col][value])
             return false;
 
         return true;
     }
 
     private static void print() throws IOException {
-        for (int row = 0; row < 9; row++) {
-            for (int col = 0; col < 9; col++) {
+        for (int row = 0; row < SUDOKU_SIZE; row++) {
+            for (int col = 0; col < SUDOKU_SIZE; col++)
                 bw.append(String.valueOf(board[row][col]));
-            }
             bw.newLine();
         }
 
