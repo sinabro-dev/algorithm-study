@@ -7,9 +7,10 @@ public class BOJ_13424_joonparkhere {
 
     static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static final BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static final int MAX_COST = 5000000;
 
-    static List<List<int[]>> edgeList;
-    static List<Integer> positionList;
+    static int[][] graph;
+    static int[] positionList;
 
     public static void main(String[] args) throws IOException {
         int numOfTest = Integer.parseInt(br.readLine());
@@ -22,15 +23,15 @@ public class BOJ_13424_joonparkhere {
     }
 
     static void init() throws IOException {
-        edgeList = new ArrayList<>();
-        positionList = new ArrayList<>();
-
         String[] spaceInfo = br.readLine().split(" ");
         int numOfRoom = Integer.parseInt(spaceInfo[0]);
         int numOfPath = Integer.parseInt(spaceInfo[1]);
 
-        for (int i = 0; i <= numOfRoom; i++)
-            edgeList.add(new ArrayList<>());
+        graph = new int[numOfRoom + 1][numOfRoom + 1];
+        for (int i = 1; i <= numOfRoom; i++) {
+            Arrays.fill(graph[i], MAX_COST);
+            graph[i][i] = 0;
+        }
 
         for (int i = 0; i < numOfPath; i++) {
             String[] pathInfo = br.readLine().split(" ");
@@ -38,21 +39,29 @@ public class BOJ_13424_joonparkhere {
             int roomB = Integer.parseInt(pathInfo[1]);
             int weight = Integer.parseInt(pathInfo[2]);
 
-            edgeList.get(roomA).add(new int[]{roomB, weight});  // room, weight
-            edgeList.get(roomB).add(new int[]{roomA, weight});
+            graph[roomA][roomB] = weight;
+            graph[roomB][roomA] = weight;
         }
 
         int numOfMember = Integer.parseInt(br.readLine());
+        positionList = new int[numOfMember];
+
         String[] positionInfo = br.readLine().split(" ");
         for (int i = 0; i < numOfMember; i++)
-            positionList.add(Integer.parseInt(positionInfo[i]));
+            positionList[i] = Integer.parseInt(positionInfo[i]);
     }
 
     private static void solution() throws IOException {
+        floyd();
+
         int targetRoom = 0;
         int targetCost = Integer.MAX_VALUE;
-        for (int room = 1; room < edgeList.size(); room++) {
-            int cost = dijkstra(room);
+
+        for (int room = 1; room <= graph[0].length - 1; room++) {
+            int cost = 0;
+            for (int position : positionList)
+                cost += graph[room][position];
+
             if (cost < targetCost) {
                 targetRoom = room;
                 targetCost = cost;
@@ -63,39 +72,18 @@ public class BOJ_13424_joonparkhere {
         bw.newLine();
     }
 
-    private static int dijkstra(int start) {
-        Map<Integer, Integer> distanceMap = new HashMap<>();
-        PriorityQueue<int[]> heap = new PriorityQueue<>(new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                return o1[1] - o2[1];
-            }
-        });
-        heap.offer(new int[]{start, 0});    // node, cost
+    private static void floyd() {
+        int numOfRoom = graph[0].length - 1;
+        for (int k = 1; k <= numOfRoom; k++) {
+            for (int i = 1; i <= numOfRoom; i++) {
+                for (int j = 1; j <= numOfRoom; j++) {
+                    if (i == j)
+                        continue;
 
-        while (!heap.isEmpty()) {
-            int[] info = heap.poll();
-            int cur = info[0];
-            int cost = info[1];
-
-            if (distanceMap.containsKey(cur))
-                continue;
-            distanceMap.put(cur, cost);
-
-            for (int[] edgeInfo : edgeList.get(cur)) {
-                int next = edgeInfo[0];
-                int weight = edgeInfo[1];
-
-                if (!distanceMap.containsKey(next))
-                    heap.offer(new int[]{next, cost + weight});
+                    graph[i][j] = Math.min(graph[i][j], graph[i][k] + graph[k][j]);
+                }
             }
         }
-
-        int totalCost = 0;
-        for (int position : positionList)
-            totalCost += distanceMap.get(position);
-
-        return totalCost;
     }
 
 }
