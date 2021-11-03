@@ -1,13 +1,5 @@
-package main
-
-import (
-	"bufio"
-	"os"
-	"strconv"
-)
-
 type Node struct {
-	end, weight int
+	node, weight int
 }
 
 type MinHeap []Node
@@ -75,63 +67,56 @@ func RightNode(i int) int {
 	return 2*i + 2
 }
 
-var (
-	sc    *bufio.Scanner
-	wr    *bufio.Writer
-	n     int
-	k     int
-	times [][]int
-)
-
-func init() {
-	sc = bufio.NewScanner(os.Stdin)
-	sc.Split(bufio.ScanWords)
-	wr = bufio.NewWriter(os.Stdout)
-}
-
-func scanInt() int {
-	sc.Scan()
-	num, _ := strconv.Atoi(sc.Text())
-	return num
-}
-
-func main() {
-	defer wr.Flush()
-	setting()
-	networkDelayTime(times, n, k)
-}
-
-func setting() {
-	num := scanInt()
-	times = make([][]int, num)
-	for i := 0; i < n; i++ {
-		times[i] = make([]int, 3)
-		times[i][0], times[i][1], times[i][2] = scanInt(), scanInt(), scanInt()
-	}
-
-	n, k = scanInt(), scanInt()
-}
-
 func networkDelayTime(times [][]int, n int, k int) int {
 	Q := &MinHeap{}
 	Q.Push(Node{k, 0})
 
-	var arr []Node
-
-	for {
-		q := Q.Pop()
-		endNode, time := q.end, q.weight
-
-		if findNode()
+	arr := make([]int, n+1)
+	for index, _ := range arr {
+		arr[index] = -1
 	}
-}
 
-func findNode(arr []Node, value int) bool {
-	for _, node := range arr {
-		if node.end == value {
-			return true
+	for len(*Q) > 0 {
+		q := Q.Pop()
+		node, time := q.node, q.weight
+
+		if arr[node] == -1 {
+			arr[node] = time
+			for _, value := range times {
+				if value[0] == node {
+					Q.Push(Node{value[1], value[2] + time})
+				}
+			}
 		}
 	}
 
-	return false
+	if findNum(arr) == n {
+		return findMax(arr)
+	}
+
+	return -1
+}
+
+func findNum(arr []int) int {
+	count := 0
+
+	for _, value := range arr {
+		if value != -1 {
+			count++
+		}
+	}
+
+	return count
+}
+
+func findMax(arr []int) int {
+	max := arr[0]
+
+	for i := 1; i < len(arr); i++ {
+		if arr[i] > max {
+			max = arr[i]
+		}
+	}
+
+	return max
 }
