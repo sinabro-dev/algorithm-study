@@ -7,50 +7,52 @@ public class PROG_12952_joonparkhere {
     private static int boardSize;
     private static int placed = 0;
     private static int answer = 0;
+
     private static boolean[] isRowExist;
     private static boolean[] isColExist;
     private static boolean[] isDiagonalAExist;
     private static boolean[] isDiagonalBExist;
 
     public static int solution(int n) {
+        setUp(n);
+        backTracking(0);
+        return answer;
+    }
+
+    private static void setUp(int n) {
         boardSize = n;
         isRowExist = new boolean[n];
         isColExist = new boolean[n];
         isDiagonalAExist = new boolean[2 * n - 1];
         isDiagonalBExist = new boolean[2 * n - 1];
-
-        place(0);
-
-        return answer;
     }
 
-    private static void place(int start) {
+    private static void backTracking(int start) {
         if (placed == boardSize) {
             answer++;
             return;
         }
 
-        for (int pos = start; pos < boardSize * boardSize; pos++) {
+        for (int i = 0; i < boardSize; i++) {
+            int pos = start + i;
+
             if (!canPlace(pos))
                 continue;
 
-            isRowExist[pos / boardSize] = true;
-            isColExist[pos % boardSize] = true;
-            isDiagonalAExist[getDiagonalAIdx(pos)] = true;
-            isDiagonalBExist[getDiagonalBIdx(pos)] = true;
+            updateExist(pos, true);
             placed++;
 
-            place(nextPos(pos));
+            backTracking(nextQueen(pos));
 
-            isRowExist[pos / boardSize] = false;
-            isColExist[pos % boardSize] = false;
-            isDiagonalAExist[getDiagonalAIdx(pos)] = false;
-            isDiagonalBExist[getDiagonalBIdx(pos)] = false;
+            updateExist(pos, false);
             placed--;
         }
     }
 
     private static boolean canPlace(int pos) {
+        if (pos >= boardSize * boardSize)
+            return false;
+
         if (isRowExist[pos / boardSize])
             return false;
         if (isColExist[pos % boardSize])
@@ -61,6 +63,13 @@ public class PROG_12952_joonparkhere {
             return false;
 
         return true;
+    }
+
+    private static void updateExist(int pos, boolean value) {
+        isRowExist[pos / boardSize] = value;
+        isColExist[pos % boardSize] = value;
+        isDiagonalAExist[getDiagonalAIdx(pos)] = value;
+        isDiagonalBExist[getDiagonalBIdx(pos)] = value;
     }
 
     private static int getDiagonalAIdx(int pos) {
@@ -104,17 +113,15 @@ public class PROG_12952_joonparkhere {
             return (boardSize - 1) + (boardSize + 1) - remain;
     }
 
-    private static int nextPos(int cur) {
+    private static int nextQueen(int cur) {
         if (boardSize <= 2)
             return cur + 1;
 
         int next = ((cur / boardSize) + 1) * boardSize;
 
-        while (true) {
-            if (!(next - boardSize == cur || next - boardSize + 1 == cur || next - boardSize - 1 == cur))
-                break;
+        while (next - boardSize == cur || next - boardSize + 1 == cur || next - boardSize - 1 == cur)
             next++;
-        }
+
         return next;
     }
 
