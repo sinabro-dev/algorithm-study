@@ -183,6 +183,8 @@
 6. [[PROG] 64064 불량 사용자](https://programmers.co.kr/learn/courses/30/lessons/64064)
 7. [[PROG] 59042 없어진 기록 찾기](https://programmers.co.kr/learn/courses/30/lessons/59042)
 8. [[LEET] 1584 Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+9. [[LEET] 617 Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
+10. [[LEET] 119 Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)
 
 ### Challenge
 
@@ -190,6 +192,7 @@
 2. [[PROG] 42579 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
 3. [[PROG] 72414 광고 삽입](https://programmers.co.kr/learn/courses/30/lessons/72414)
 4. [[PROG] 72413 합승 택시 요금](https://programmers.co.kr/learn/courses/30/lessons/72413)
+5. [[LEET] 973 K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 
 <br>
 
