@@ -181,12 +181,15 @@
 4. [[BOJ] 15653 구슬 탈출 4](https://www.acmicpc.net/problem/15653)
 5. [[LEET] 198 House Robber](https://leetcode.com/problems/house-robber/)
 6. [[PROG] 64064 불량 사용자](https://programmers.co.kr/learn/courses/30/lessons/64064)
+7. [[PROG] 59042 없어진 기록 찾기](https://programmers.co.kr/learn/courses/30/lessons/59042)
+8. [[LEET] 1584 Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 
 ### Challenge
 
 1. [[BOJ] 1766 문제집](https://www.acmicpc.net/problem/1766)
 2. [[PROG] 42579 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
 3. [[PROG] 72414 광고 삽입](https://programmers.co.kr/learn/courses/30/lessons/72414)
+4. [[PROG] 72413 합승 택시 요금](https://programmers.co.kr/learn/courses/30/lessons/72413)
 
 <br>
 
