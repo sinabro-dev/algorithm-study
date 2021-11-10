@@ -192,7 +192,7 @@
 2. [[PROG] 42579 베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
 3. [[PROG] 72414 광고 삽입](https://programmers.co.kr/learn/courses/30/lessons/72414)
 4. [[PROG] 72413 합승 택시 요금](https://programmers.co.kr/learn/courses/30/lessons/72413)
-5. [[LEET] 973 K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+5. [[LEET] 313 Super Ugly Number](https://leetcode.com/problems/super-ugly-number/)
 
 <br>
 
