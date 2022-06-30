@@ -123,5 +123,5 @@ BOJ, Programmers 그리고 LeetCode에서의 백준 기준 골드 난이도의 �
 | 스터디원 | 지각 제출 | 미제출 |
 | :---: | :---: | :---: |
 | @joonparkhere  | 0 | 0 |
-| @HyeonjinChoi  | 0 | 0 |
+| @HyeonjinChoi  | 3 | 4 |
 
