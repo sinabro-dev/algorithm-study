@@ -14,9 +14,11 @@ Example 1:
 Input: s = "()"
 Output: true
 """
+
 class Solution:
+
     """
-    Keywords: Stack
+    Keyword: Stack
     Space: O(N)
     Time: O(N)
     """
